@@ -20,10 +20,10 @@ def mnist():
         img = Image.open(path).convert('L')
         img = np.resize(img,(1,784))
         # img = 255 - (img)
-        mpath = os.path.dirname(__file__) + '/model1.pickle'
-        with open(mpath, 'rb') as f:
-            model = pickle.load(f)
-        pred = model.predict(img)
+        # mpath = os.path.dirname(__file__) + '/model1.pickle'
+        # with open(mpath, 'rb') as f:
+        #     model = pickle.load(f)
+        # pred = model.predict(img)
         return render_template('mnistresult.html', data=pred)
 
 if __name__ ==  '__main__':
